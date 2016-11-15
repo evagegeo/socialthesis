@@ -1,0 +1,1159 @@
+/**
+ * template.css
+ *
+ * The main stylesheet for Social Thesis
+ *
+ */
+
+/************************************************* Reset CSS *************************************************/
+/*************************************************************************************************************/
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, h4, h5, h6 { background:transparent; border:0; font-size:100%; margin:0; outline:0; padding:0; vertical-align:baseline;  }
+ul, ol { margin:13px 0 13px 15px; padding:0; }
+ul li, ol li { line-height:1.7; margin:0 0 2px 0; padding:0; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; }
+:focus { outline:0; }
+ins { text-decoration:none; }
+del { text-decoration:line-through; }
+table { border-collapse:collapse; border-spacing:0; }
+/********************************************* END OF Reset CSS **********************************************/
+/*************************************************************************************************************/
+
+/************************************************* Clearfix **************************************************/
+/*************************************************************************************************************/
+.clear {
+    clear: both;
+}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+/********************************************** END OF Clearfix **********************************************/
+/*************************************************************************************************************/
+
+/************************************************ Body, html *************************************************/
+/*************************************************************************************************************/
+html {
+    overflow-y: scroll;
+}
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #333333;
+	background: #FFFFFF url('../img/bg.png') top left repeat-x;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+/********************************************* END OF Body, html *********************************************/
+/*************************************************************************************************************/
+
+/************************************************* Structure *************************************************/
+/*************************************************************************************************************/
+.push {
+	height: 20px;
+}
+
+#container {
+    margin: 0 auto;
+    width: 960px;
+}
+#container #header {
+    margin: 0;
+	padding: 10px 0 0;
+    height: 80px;
+}
+#container #header img.logo {
+    margin: 15px 0 0 5px;
+}
+#container #content {
+    padding: 15px 0;
+}
+#container #footer {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 10px;
+    text-align: center;
+    color: #999999;
+	border-top: 1px solid #EEEEEE;
+}
+
+/* User Logged in */
+#container #header div.photo {
+    float: right;
+    margin: 15px 0 0 0;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    background: url('../img/photo-bg.png') top left no-repeat;
+}
+#container #header #user-info {
+    float: right;
+    text-align: right;
+    margin: 22px 10px 0 0;
+    color: #FFFFFF;
+}
+
+/* Enable sidebar */
+#container #content #sidebar {
+    width: 190px;
+    float: right;
+    padding: 15px 0;
+}
+#container #content.enable_sidebar {
+    background: url('../img/content-bg.png') right top repeat-y;
+    padding: 0;
+}
+#container #content.enable_sidebar #main {
+    padding: 15px 0;
+    margin: 0 210px 0 0;
+}
+/********************************************** END OF Structure *********************************************/
+/*************************************************************************************************************/
+
+/************************************************** General **************************************************/
+/*************************************************************************************************************/
+ul, ol {
+    margin: 8px 0;
+    padding: 0 0 0 30px;
+}
+ul li, ol li {
+    margin: 4px 0;
+    padding :0;
+}
+dl {
+    margin: 8px 0;
+    padding: 0 0 0 15px;
+}
+dl dt {
+    font-weight: bold;
+    margin: 4px 0;
+}
+dl dd {
+    font-size: 12px;
+    margin: 0 0 0 15px;
+}
+p {
+    padding: 5px 0;
+}
+.tcenter {
+    text-align: center;
+}
+.tleft {
+    text-align: left;
+}
+.tright {
+    text-align: right;
+}
+.tbold {
+    font-weight: bold;
+}
+.titalic {
+    font-style: italic;
+}
+.tred {
+    color: #D8000C;
+}
+.tgreen {
+    color: #060;
+}
+.tgrey {
+    color: #777777;
+}
+.fleft {
+    float: left !important;
+}
+.fright {
+    float: right !important;
+}
+.pos-rel {
+    position: relative;
+}
+.pos-abs {
+    position: absolute;
+}
+.dis-block {
+    display: block;
+}
+.dis-inline {
+    display: inline;
+}
+.dis-none {
+    display: none;
+}
+.pad-none {
+    padding: 0 !important;
+}
+.mar-none {
+    margin: 0 !important;
+}
+.ver-align-top {
+    vertical-align: top;
+}
+.mar-left {
+    margin-left: 5px;
+}
+img {
+    border: 0;
+}
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: pointer;
+}
+.radius {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.radius-top {
+	-moz-border-radius-topright: 3px;
+    -moz-border-radius-topleft: 3px;
+	-webkit-border-top-right-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.radius-bottom {
+	-moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+/*********************************************** END OF General **********************************************/
+/*************************************************************************************************************/
+
+/************************************************** Headings *************************************************/
+/*************************************************************************************************************/
+h1, h2, h3 {
+    padding: 6px 8px 4px;
+    margin: 0 0 8px;
+    border: 1px solid #DDDDDD;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 0 1px 1px #FFFFFF;
+    background-color: #EEEEEE;
+	background-image: -moz-linear-gradient(top, #F6F6F6, #EEEEEE);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#EEEEEE));
+	background-image: -webkit-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: -o-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: linear-gradient(top, #F6F6F6, #EEEEEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6F6F6', endColorstr='#EEEEEE');
+}
+h2 {
+    font-size: 13px;
+}
+h3 {
+    font-size: 11px;
+}
+h4, h5, h6 {
+    padding: 3px 5px 0 0;
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+h5 {
+    font-size: 13px;
+}
+h6 {
+    font-size: 11px;
+}
+/*********************************************** END OF Headings *********************************************/
+/*************************************************************************************************************/
+
+/*************************************************** Links ***************************************************/
+/*************************************************************************************************************/
+a {
+    color: #476AAD;
+    font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a.agreen {
+    color: #738E05;
+}
+a.agreen:hover {
+    text-decoration: underline;
+}
+a.ared {
+    color: #D81313;
+}
+a.ared:hover {
+    text-decoration: underline;
+}
+a.alight {
+    color: #EEEEEE;
+    text-shadow: 0 1px 1px #303030;
+}
+a.alight:hover {
+    text-decoration: underline;
+}
+/************************************************ END OF Links ***********************************************/
+/*************************************************************************************************************/
+
+/************************************************** Messages *************************************************/
+/*************************************************************************************************************/
+.msg-error, .msg-alert, .msg-ok, .msg-info, .msg-loading {
+    padding: 5px 10px;
+    margin: 0 0 5px;
+    border: 2px solid #DDDDDD;
+}
+.msg-error {
+    background: #FBE3E4;
+    color: #8A1F11;
+    border-color: #FBC2C4;
+}
+.msg-alert {
+    background: #FFF6BF;
+    color: #514721;
+    border-color: #FFD324;
+}
+.msg-ok {
+    background: #E6EFC2;
+    color: #264409;
+    border-color: #C6D880;
+}
+.msg-info {
+    background: #F6F6F6;
+    color: #555555;
+    border-color: #EEEEEE;
+}
+.msg-loading {
+    background: #FFFFFF url('../img/loading.gif') 5px 50% no-repeat;
+    padding: 5px 10px 5px 31px;
+    color: #333333;
+    border-color: #EEEEEE;
+}
+.msg-error a {
+    color: #8A1F11;
+    font-weight: bold;
+}
+.msg-alert a {
+    color: #514721;
+    font-weight: bold;
+}
+.msg-ok a {
+    color: #264409;
+    font-weight: bold;
+}
+.msg-info a {
+    color: #000000;
+    font-weight: bold;
+}
+.msg-form-error {
+    color: #8A1F11;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+}
+.msg-form-ok {
+    color: #579433;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+}
+.msg-form-info {
+    color: #777777;
+    font-weight: normal;
+    padding: 0 0 0 10px;
+}
+/*********************************************** END OF Messages *********************************************/
+/*************************************************************************************************************/
+
+/*************************************************** Forms ***************************************************/
+/*************************************************************************************************************/
+form fieldset {
+    border: 1px solid #DDDDDD;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #F9F9F9;
+}
+form legend {
+    border: 1px solid #CCCCCC;
+    text-shadow: 0 1px 1px #FFFFFF;
+    font-size: 12px;
+    min-width: 300px;
+    font-weight: bold;
+    padding: 6px;
+    margin: 0 0 0 0;
+    text-align: left;
+    background-color: #EEEEEE;
+	background-image: -moz-linear-gradient(top, #F6F6F6, #EEEEEE);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#EEEEEE));
+	background-image: -webkit-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: -o-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: linear-gradient(top, #F6F6F6, #EEEEEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6F6F6', endColorstr='#EEEEEE');
+}
+form label {
+	text-align: right;
+    padding: 6px;
+    margin: 5px 5px 5px 0;
+    color: #555555;
+    width: 120px;
+    display: inline-block;
+    font-weight: bold;
+}
+form input[type=text], form input[type=password], form textarea, form select {
+    color: #555555;
+    font-size: 12px;
+	width: 300px;
+    padding: 6px;
+    margin: 5px 2px 5px 0;
+	text-shadow: 0 1px 1px #FFFFFF;
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+}
+form input[type=text]:focus, form input[type=password]:focus, form textarea:focus {
+    border: 1px solid #999999;
+    background-color: #FFFFFF;
+	background-image: -moz-linear-gradient(top, #FFFFFF, #F6F6F6);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F6F6F6));
+	background-image: -webkit-linear-gradient(#FFFFFF, #F6F6F6);
+    background-image: -o-linear-gradient(#FFFFFF, #F6F6F6);
+    background-image: linear-gradient(top, #FFFFFF, #F6F6F6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F6F6F6');
+}
+form textarea {
+    padding: 6px !important;
+}
+form select {
+    display: inline;
+    padding: 0;
+	text-shadow: none;
+}
+form option {
+	padding: 3px;
+    background: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form input[type=text].inactive, form input[type=password].inactive, form textarea.inactive {
+    border: 1px solid #EEEEEE;
+    background: #F6F6F6;
+    color: #999999;
+}
+form input[type=text].input-ok, form input[type=password].input-ok, form textarea.input-ok {
+    border: 1px solid #C6D880;
+}
+form input[type=text].input-error, form input[type=password].input-error, form textarea.input-error {
+    border: 1px solid #FBC2C4;
+}
+form label.label-auto, .labels-auto label {
+    width: auto !important;
+}
+form label.label-large, .labels-large label {
+    width: 200px !important;
+}
+form label.label-xlarge, .labels-xlarge label {
+    width: 300px !important;
+}
+form input.box-auto, form select.box-auto, form textarea.box-auto, .boxes-auto input[type=text], .boxes-auto input[type=password], .boxes-auto select, .boxes-auto textarea {
+    width: auto !important;
+}
+form input.box-small, form select.box-small, form textarea.box-small, .boxes-small input[type=text], .boxes-small input[type=password], .boxes-small select, .boxes-small textarea {
+    width: 120px !important;
+}
+form input.box-large, form select.box-large, form textarea.box-large, .boxes-large input[type=text], .boxes-large input[type=password], .boxes-large select, .boxes-large textarea {
+    width: 490px !important;
+}
+form input.box-xlarge, form select.box-xlarge, form textarea.box-xlarge, .boxes-xlarge input[type=text], .boxes-xlarge input[type=password], .boxes-xlarge select, .boxes-xlarge textarea {
+    width: 700px !important;
+}
+form ul.align-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+form label span {
+    color: #FC3737;
+}
+form label.inside {
+    font-weight: normal;
+}
+input[type=text].search-con {
+    padding: 0 50px 0 8px;
+    margin: 0;
+    height: 27px;
+    line-height: 27px;
+    border: 1px solid #CCCCCC;
+}
+input[type=text].search-con:hover, input[type=text].search-con:focus {
+    border: 1px solid #CCCCCC;
+}
+input[type=submit].search-con {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: 0 10px;
+    margin: 0;
+    height: 27px;
+    line-height: 27px;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-left: 1px solid #CCCCCC;
+    -webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+/* Buttons */
+button, form input[type=submit], a.btn, a.btn-blue, a.btn-green, a.btn-red {
+    font-family: Verdana;
+    padding: 5px;
+	margin: 5px 2px 5px 0;
+	text-align: center;
+    -webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+	/* Default grey style */
+	text-shadow: 0 1px 1px #FFFFFF;
+	color: #666666;
+	border: 1px solid #AAAAAA;
+	background-color: #F6F6F6;
+	background-image: -moz-linear-gradient(top, #FFFFFF, #F6F6F6);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F6F6F6));
+	background-image: -webkit-linear-gradient(#FFFFFF, #F6F6F6);
+    background-image: -o-linear-gradient(#FFFFFF, #F6F6F6);
+    background-image: linear-gradient(top, #FFFFFF, #F6F6F6);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F6F6F6');
+}
+button:hover, form input[type=submit]:hover, a.btn:hover {
+    text-decoration: none;
+	background-color: #EEEEEE;
+	background-image: -moz-linear-gradient(top, #EEEEEE, #DDDDDD);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#DDDDDD));
+	background-image: -webkit-linear-gradient(#EEEEEE, #DDDDDD);
+    background-image: -o-linear-gradient(#EEEEEE, #DDDDDD);
+    background-image: linear-gradient(top, #EEEEEE, #DDDDDD);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#DDDDDD');
+}
+/* Blue */
+button.blue, form input[type=submit].blue, a.btn-blue {
+    color: #355793;
+}
+button.blue:hover, form input[type=submit].blue:hover, a.btn-blue:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+    text-shadow: 0 1px 1px #000000;
+    border: 1px solid #355793;
+	background-color: #466AAC;
+	background-image: -moz-linear-gradient(top, #466AAC, #355793);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#466AAC), to(#355793));
+	background-image: -webkit-linear-gradient(#466AAC, #355793);
+    background-image: -o-linear-gradient(#466AAC, #355793);
+    background-image: linear-gradient(top, #466AAC, #355793);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#466AAC', endColorstr='#355793');
+    
+}
+/* Green */
+button.green, form input[type=submit].green, a.btn-green {
+    color: #93AF20;
+}
+button.green:hover, form input[type=submit].green:hover, a.btn-green:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+    text-shadow: 0 1px 1px #000000;
+    border: 1px solid #95AF2B;
+	background-color: #B3CF40;
+	background-image: -moz-linear-gradient(top, #B3CF40, #93AF20);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#B3CF40), to(#93AF20));
+	background-image: -webkit-linear-gradient(#B3CF40, #93AF20);
+    background-image: -o-linear-gradient(#B3CF40, #93AF20);
+    background-image: linear-gradient(top, #B3CF40, #93AF20);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3CF40', endColorstr='#93AF20');
+    
+}
+/* Red */
+button.red, form input[type=submit].red, a.btn-red {
+    color: #BF3B3B;
+}
+button.red:hover, form input[type=submit].red:hover, a.btn-red:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+    text-shadow: 0 1px 1px #000000;
+    border: 1px solid #A01C1C;
+	background-color: #DF5353;
+	background-image: -moz-linear-gradient(top, #DF5353, #BF3B3B);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#DF5353), to(#BF3B3B));
+	background-image: -webkit-linear-gradient(#DF5353, #BF3B3B);
+    background-image: -o-linear-gradient(#DF5353, #BF3B3B);
+    background-image: linear-gradient(top, #DF5353, #BF3B3B);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DF5353', endColorstr='#BF3B3B');
+}
+a.btn, a.btn-green, a.btn-blue, a.btn-red {
+    margin: 2px;
+    padding: 1px 5px;
+}
+/*********************************************** END OF Forms ************************************************/
+/*************************************************************************************************************/
+
+/************************************************** Tables ***************************************************/
+/*************************************************************************************************************/
+table {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 0 0 8px;
+}
+table tr.status-red td {
+    background-color: #FBE3E4;
+}
+table tr.status-green td {
+    background-color: #E6EFC2;
+}
+table th {
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 8px 4px;
+    font-size: 11px;
+    color: #000000;
+    border: 1px solid #CCCCCC;
+    text-shadow: 0 1px 1px #FFFFFF;
+    background-color: #EEEEEE;
+	background-image: -moz-linear-gradient(top, #F6F6F6, #EEEEEE);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#EEEEEE));
+	background-image: -webkit-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: -o-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: linear-gradient(top, #F6F6F6, #EEEEEE);
+}
+table td {
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    padding: 6px 8px 4px;
+}
+table td img {
+    vertical-align: middle;
+}
+table td.backcolor {
+    font-weight: bold;
+    background-color: #F9F9F9;
+}
+table.border-none th, table.border-none td {
+    border: none;
+}
+table.backcolor-none th, table.backcolor-none td {
+    background-color: none;
+}
+td.tdgreen {
+	background-color: #B2DF61;
+}
+/*********************************************** END OF Tables ***********************************************/
+/*************************************************************************************************************/
+
+/************************************************* Navigation ************************************************/
+/*************************************************************************************************************/
+
+/* Main navigation */
+ul#nav { 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+}
+ul#nav li {
+    margin: 0 10px 0 0;
+    padding: 0;
+    float: left;
+}
+ul#nav li a {
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px 0 30px;
+    text-decoration: none;
+	font-weight: bold;
+    position: relative;
+    text-align: left;
+    text-shadow: 0 1px 1px #000000;
+}
+ul#nav li a img {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+ul#nav li a img.arrow {
+    display: none;
+}
+ul#nav li a.active img.arrow {
+    display: block;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+}
+ul#nav li a:hover, ul#nav li a.active {
+    background: url('../img/nav-hover-bg.png') top left repeat-x;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+/* User navigation */
+ul#user-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul#user-nav li {
+    margin: 0 0 5px;
+    padding: 0;
+}
+ul#user-nav li.section {
+    margin: 0 0 5px;
+    padding: 0;
+    border-bottom: 1px solid #F6F6F6;
+}
+ul#user-nav li.sub {
+    margin: -6px 0 5px;
+}
+ul#user-nav li.sub a {
+    margin: 0 10px 0 0;
+    background: none !important;
+    font-weight: normal !important;
+    font-style: italic;
+}
+ul#user-nav li a {
+    position: relative;
+    color: #000000;
+    display: block;
+    padding: 6px 10px 6px 15px;
+	text-align: left;
+    text-decoration: none;
+    font-weight: normal;
+    border: 1px solid #FFFFFF;
+    border-left: none;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+	-webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+ul#user-nav li a img.arrow {
+    display: none;
+}
+ul#user-nav li a.active img.arrow {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: -1px;
+}
+ul#user-nav li a:hover, ul#user-nav li a.active {
+    border: 1px solid #EEEEEE;
+    border-left: none;
+    background-color: #F9F9F9;
+	background-image: -moz-linear-gradient(top, #FFFFFF, #F9F9F9);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F9F9F9));
+	background-image: -webkit-linear-gradient(#FFFFFF, #F9F9F9);
+    background-image: -o-linear-gradient(#FFFFFF, #F9F9F9);
+    background-image: linear-gradient(top, #FFFFFF, #F9F9F9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F9F9F9');
+}
+ul#user-nav li a.active {
+    color: #333333;
+	font-weight: bold;
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+ul#user-nav li a.ured {
+    color: #D8000C;
+    border: none;
+}
+ul#user-nav li a.ured:hover {
+    color: #D8000C;
+    background-color: #FFCFCF;
+	border: none;
+}
+/********************************************** END Navigation ***********************************************/
+/*************************************************************************************************************/
+
+/************************************************* Pagination ************************************************/
+/*************************************************************************************************************/
+ul.pagination {
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+}
+ul.pagination li {
+    display: inline-block;
+}
+ul.pagination li a.page {
+    display: block;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    text-shadow: 0 1px 1px #FFFFFF;
+    font-weight: bold;
+    margin: 0 2px;
+    padding: 2px 8px;
+    background-color: #F6F6F6;
+    background-image: -moz-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #F6F6F6),color-stop(1, #EEEEEE));
+    background-image: -webkit-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: -o-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: linear-gradient(top, #F6F6F6, #EEEEEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F6F6F6', EndColorStr='#EEEEEE');
+}
+ul.pagination li a.page:hover, ul.pagination li span.page-active {
+    display: block;
+    border: 1px solid #999999;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0 2px;
+    padding: 2px 8px;
+    text-shadow: 0 1px 1px #000000;
+    cursor: pointer;
+    background-color: #EEEEEE;
+    background-image: -moz-linear-gradient(#EEEEEE, #CCCCCC);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #EEEEEE),color-stop(1, #CCCCCC));
+    background-image: -webkit-linear-gradient(#EEEEEE, #CCCCCC);
+    background-image: -o-linear-gradient(#EEEEEE, #CCCCCC);
+    background-image: linear-gradient(top, #EEEEEE, #CCCCCC);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#EEEEEE', EndColorStr='#CCCCCC');
+}
+ul.pagination li span.page-inactive {
+    display: block;
+    background-color: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    margin: 0 2px;
+    padding: 2px 8px;
+}
+/********************************************** END Pagination ***********************************************/
+/*************************************************************************************************************/
+
+/************************************************** Content **************************************************/
+/*************************************************************************************************************/
+#ajax-loading {
+    display: none;
+    border: 1px solid #555555;
+    position: fixed;
+    top: 20px;
+    left: 16px;
+    margin-left: 50%;
+    padding: 3px;
+    -webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+    -webkit-box-shadow: 0 0 5px #000000;
+	-moz-box-shadow: 0 0 5px #000000;
+	box-shadow: 0 0 5px #000000;
+	background-color: #F6F6F6;
+	background-image: -moz-linear-gradient(top, #FFFFFF, #F6F6F6);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F6F6F6));
+	background-image: -webkit-linear-gradient(#FFFFFF, #F6F6F6);
+    background-image: -o-linear-gradient(#FFFFFF, #F6F6F6);
+    background-image: linear-gradient(top, #FFFFFF, #F6F6F6);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F6F6F6');
+}
+#ajax-loading img {
+    vertical-align: middle;
+}
+.body-con, .body-con-alone {
+    padding: 8px;
+    margin: -8px 0 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
+.body-con-alone {
+    margin: 8px 0;
+    border: 1px solid #EEEEEE;
+}
+.simple-con {
+    padding: 8px;
+    margin: 0 0 8px;
+    border: 1px solid #DDDDDD;
+    color: #555555;
+    background-color: #EEEEEE;
+	background-image: -moz-linear-gradient(top, #F6F6F6, #EEEEEE);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#EEEEEE));
+	background-image: -webkit-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: -o-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: linear-gradient(top, #F6F6F6, #EEEEEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6F6F6', endColorstr='#EEEEEE');
+}
+.center-con {
+    margin: 0 200px;
+}
+h3 .published {
+    float: right;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: normal;
+}
+h3 .extra {
+    float: right;
+    margin: -5px -6px 0 8px;
+    padding: 3px 4px;
+    border-left: 1px solid #FFFFFF;
+}
+h3 .extra img {
+    vertical-align: middle;
+}
+
+/* Content Tabs */
+ul.content-tabs, ul.content-tabs-alone {
+    overflow: auto;
+    list-style: none;
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+    border: 1px solid #DDDDDD;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: #EEEEEE;
+	background-image: -moz-linear-gradient(top, #F6F6F6, #EEEEEE);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#EEEEEE));
+	background-image: -webkit-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: -o-linear-gradient(#F6F6F6, #EEEEEE);
+    background-image: linear-gradient(top, #F6F6F6, #EEEEEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6F6F6', endColorstr='#EEEEEE');
+}
+ul.content-tabs li, ul.content-tabs-alone li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+ul.content-tabs li a, ul.content-tabs-alone li a {
+    display: block;
+    padding: 6px 8px 4px;
+    color: #333333;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #FFFFFF;
+    border-right: 1px solid #DDDDDD;
+}
+ul.content-tabs li a:hover, ul.content-tabs li a.active, ul.content-tabs-alone li a:hover, ul.content-tabs-alone li a.active {
+    background: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* PROFESSOR ++ Sidebar Image */
+.thesis-con {
+	padding: 8px;
+    margin: -8px;
+}
+div#profile-image {
+    position: relative;
+}
+div#profile-image table {
+    margin: 0 5px;
+    width: 180px;
+}
+div#profile-image table td {
+    border-color: #EEEEEE;
+}
+div#profile-image img.arrow {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: -1px;
+}
+/* END PROFESSOR ++ Sidebar Image */
+
+/* Comments */
+.comment-con {
+    margin: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #F6F6F6;
+    overflow: auto;
+}
+.comment-con:hover .info {
+    background-color: #F6F6F6;
+}
+.comment-con .info {
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    border-left: 1px solid #EEEEEE;
+    width: 100px;
+    float: right;
+}
+.comment-con .content {
+    padding: 5px;
+    margin-right: 111px;
+    color: #555555;
+}
+.comment-con img.photo {
+    margin: 0 20px;
+}
+.comment-con img.arrow {
+    position: absolute;
+    left: -1px;
+    bottom: 25px;
+}
+/* END Comments */
+
+/* Suggestions + Directory */
+#out-con {
+    margin-bottom: 15px;
+}
+.sug-left {
+    margin-left: 6px;
+}
+.content-con {
+    border: 1px solid #EEEEEE;
+    float: left;
+    margin-bottom: 5px;
+    width: 475px;
+    position: relative;
+}
+.content-con a.sug-title {
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #EEEEEE;
+    display: block;
+    padding: 5px;
+    margin: -5px -5px 0;
+}
+.content-con a.sug-title:hover {
+    background-color: #FFFFFF;
+}
+.content-con:hover .info {
+    background-color: #EEEEEE;
+}
+.content-con .info {
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    border-left: 1px solid #EEEEEE;
+    width: 100px;
+    background: #F6F6F6;
+    float: right;
+}
+.content-con .content {
+    margin: 0 111px 0 0;
+    padding: 5px;
+    color: #555555;
+}
+.content-con .com-star {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    line-height: 15px;
+    text-align: left;
+    padding: 2px 5px;
+}
+.content-con img.arrow {
+    position: absolute;
+    left: -1px;
+    bottom: 25px;
+}
+/* END Suggestions + Directory */
+
+/* Requests */
+.thesis-con-req {
+	padding: 5px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 3px 0;
+	cursor: pointer;
+}
+.th-thesis {
+	width: 310px;
+	border-right: 1px solid #EEE;
+}
+#allthesis_req, #allthesis_req_selected {
+	list-style: none;
+	margin: 0;
+	padding: 10px 5px;
+	float: left;
+}
+#allthesis_req {
+	background-color: #DDD;
+	width: 300px;
+}
+#allthesis_req_selected {
+	background-color: #FFFFCC;
+	margin-left: 10px;
+	width: 52%;
+}
+.thesis-con-order {
+	width: 120px;
+}
+.thesis-con-title {
+	width: 250px;
+}
+.thesis-set-con2 {
+	padding: 0 0 10px 30px;
+}
+table.sortable thead tr .header {
+	background-image: url(../img/sort-bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.sortable thead tr .headerSortUp {
+	background-image: url(../img/sort-asc.gif);
+}
+table.sortable thead tr .headerSortDown {
+	background-image: url(../img/sort-desc.gif);
+}
+table.sortable th {
+	padding: 10px 15px 10px 5px;
+}
+/* END Requests */
+
+/* Thesis - Archive */
+.profcon {
+	padding: 10px 10px 10px 120px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #F6F6F6;
+	border: #EEE;
+	position: relative;
+	border: 1px solid #EEE;
+	margin: 10px 0;
+}
+.profcon img {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.profcon .right-con {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.allthesis-con {
+	padding: 0 0 0 120px;
+}
+.thesis-desc {
+	padding: 0 0 0 10px;
+}
+.thesis-set-con {
+	margin: -1px 0 10px 0;
+	padding: 0 0 10px 120px;
+	border-bottom: 1px solid #EEE;
+}
+/* END Thesis - Archive */
+
+/*********************************************** END Content *************************************************/
+/*************************************************************************************************************/
