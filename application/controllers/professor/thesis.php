@@ -3,7 +3,7 @@
 /**
  * Thesis
  *
- * 
+ * @author Jason Koukliatis
  */
 class Thesis extends MY_Controller {
 
@@ -23,7 +23,7 @@ class Thesis extends MY_Controller {
 	function index()
 	{
 		// Load models & libraries
-        $this->load->model('m_sets', 'msets');
+    $this->load->model('m_sets', 'msets');
 		$this->load->model('m_thesis', 'mthesis');
 		$this->load->model('m_requests', 'mreq');
         
@@ -254,6 +254,7 @@ class Thesis extends MY_Controller {
 			$this->load->model('m_requests', 'mreq');
 			$this->load->model('m_divisions', 'mdirs');
 			$this->load->model('m_sets', 'msets');
+  		$this->load->model('m_thesis', 'mthesis');
 
 			if ($student_id)
 			{
